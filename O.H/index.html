@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osmani Holding</title>
+</head>
+<body>
+    <style>
+        /* Stilizim i thjesht */
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          background-color: white;
+        }
+    
+        /* Stilizmi qe e largon foton */
+        #welcome-image {
+          width: 80%;
+          height: 90%;
+          transition: opacity 2s ease-in-out; /*Efekti i animacionit */
+        }
+        .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+      </style>
+    <div class="container">
+      <!-- Fotoja e welcome-it -->
+      <img id="welcome-image" src="c:\Users\OnLine\Desktop\O.H\Images\osmaniholding.jpg" alt="Welcome Image">
+      <button class="button" href="html/index1.">Click me</button>
+    </div>
+    
+      <script>
+        // kodimi me javascript duke e bere foton qe te largohet
+        document.addEventListener("DOMContentLoaded", function() {
+          var welcomeImage = document.getElementById("welcome-image");
+    
+          // Kapaciteti i kohzgjatjes eshte 3 sekonda
+          setTimeout(function() {
+            welcomeImage.style.opacity = 0;
+          }, 3000); // Vlera 3000 eshte kthyer prej 3 sekondav n mili sekonda
+        });
+      </script>
+</body>
+</html>
